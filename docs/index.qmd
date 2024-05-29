@@ -1,0 +1,38 @@
+---
+title: "An example scholarly article"
+date: today
+author:
+  - name: Nicolas Bartzsch
+    orcid: 0009-0003-8702-2500
+    email: nbartzsch@ethz.ch
+    affiliation: 
+      - name: ETH Zurich
+        url: https://ethz.ch/de.html
+abstract: 
+  The abstract will be placed here. Breaks can be added by hitting return on the keyboard.
+license: "CC BY"
+citation: 
+  container-title: My Blog
+  url: https://www.example.com
+bibliography: references.bib
+csl: apa.csl
+editor: visual
+---
+
+# Introduction
+
+This is the inctroduction
+
+# Methods
+
+The methods are descirbed here
+
+# Results
+
+The results are in this section
+
+# Conclusions
+
+Conlucions are in this section
+
+# References
