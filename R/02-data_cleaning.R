@@ -93,3 +93,4 @@ mensa_food_waste_clean <-  mensa_food_waste_clean |>
 
 #Save clean data to repo
 write_csv(mensa_food_waste_clean, "data/processed/processed_data.csv")
+write_csv(mensa_food_waste_clean, "data/final/final_data.csv")
