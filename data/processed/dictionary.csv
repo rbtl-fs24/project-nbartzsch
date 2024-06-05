@@ -1,1 +1,11 @@
 variable_name,description
+fw_concern,indicates how concerned the participant is with food waste
+less_menus,would the pariticpant consider having less menus in favour of less food waste
+eatting_freq,how often does this person eat at the polymensa during a typical week
+menu_choice,what is the biggest factor when choosing the spcific menu
+fw_today,how much food is wasted nowadays when eating at polymensa
+smaller_servings,if there was an option for a smaller serving with a reduced price how often would the participant choose the smaller serving
+larger_serving,if there was an option for a larger serving with a higher price how often would the participant choose the larger serving
+second_serving,when a second serving was still available how often would the pariticpant get another serving
+new_portions,perception of the new portion sizes wrt before
+compare_fw,percpetion of how the ammount of food wasted chnaged

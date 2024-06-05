@@ -8,55 +8,31 @@
 
 **Author A**
 
-- First name:
-- Surname:
-- ORCID iD
-- Email:
+- First name: Nicolas 
+- Surname: Bartzsch
+- ORCID iD: 0009-0003-8702-2500
+- Email: nbartzsch@ethz.ch
 
-**Author B**
 
-- First name:
-- Surname:
-- ORCID iD
-- Email:
+3.  Date of data collection: From 2024-06-02 until 2024-06-05
 
-etc.
-
-3.  Date of data collection (single date, range, approximate date):
-
-4.  Geographic location of data collection:
+4.  Geographic location of data collection: Zürich, Switzerland
 
 5.  Information about funding sources that supported the collection of
-    the data: 
+    the data: No special funding was required for this data collection
 
 ## Sharing / access information
 
 1.  Licenses/restrictions placed on the data:  
 
-Recommended: This work is licensed under the Creative Commons Attribution 4.0 International license (CC-BY-4.0).
+This work is licensed under the Creative Commons Attribution 4.0 International license (CC-BY-4.0).
 
-2.  Links to publications that cite or use the data: 
-
-3.  Links to other publicly accessible locations of the data: -
-
-4.  Links/relationships to ancillary data sets: 
-
-5.  Was data derived from another source? 
 
 ## Methodological information
 
-1.  Description of methods used for collection/generation of data:
+1.  Description of methods used for collection/generation of data: The data was obtained through a voluntary online survey targeted at ETH students
 
-2.  Methods for processing the data:
+2.  Methods for processing the data: The data was processed using R and various R libraries
 
-3.  Instrument- or software-specific information needed to interpret the
-    data: 
-
-4.  Standards and calibration information, if appropriate: -
-
-5.  Environmental/experimental conditions: 
-
-6.  Describe any quality-assurance procedures performed on the data: 
-
-7.  People involved with sample collection, processing, analysis and/or
-    submission:
+3.  People involved with sample collection, processing, analysis and/or
+    submission: Nicolas Bartzsch 
