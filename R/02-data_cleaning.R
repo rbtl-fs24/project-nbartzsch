@@ -23,11 +23,12 @@ How common was it for you to take another serving of food?`,
          new_portions = `With the restriction on second servings, do you perceive the initial portion sizes to be larger, smaller, or about the same as before?`,
          compare_fw = `Have you noticed a significant change in the amount of food waste you generate at the Polymensa after the policy change disallowing second servings?`)
 
-#Filter out entries that do not accept conditions and 
+#Filter out entries that do not accept conditions 
 mensa_food_waste_clean <- mensa_food_waste_clean |>
   filter(conditions == "I read and understood the conditions listed above and want to voluntarily participate in this survey")
 
 #Remove conditions column afterwards since only valid participants are included and remove time since not relevant for analysis
+#also remove the time since its not relevant for this anlysis.
 mensa_food_waste_clean <- mensa_food_waste_clean |>
   select(-conditions,
          -time)
@@ -80,7 +81,7 @@ levels_compare_fw <-  c("Increase in food waste",
                         "Same food waste",
                         "Decrease in food waste")
                              
-#Change variable type to fct
+#Change variable type to fct (not really necessary since exporting as csv cancells all of these changes)
 mensa_food_waste_clean <-  mensa_food_waste_clean |>
   mutate(fw_concern = factor(fw_concern, levels_fw_concern),
          less_menus = factor(less_menus, levels_less_menus),
@@ -94,6 +95,8 @@ mensa_food_waste_clean <-  mensa_food_waste_clean |>
 
 #Save clean data to repo
 write_csv(mensa_food_waste_clean, "data/processed/processed_data.csv")
+
+##Creating data for the specific tables and figures
 
 #Create data for the summary table
 tbl_data <-  mensa_food_waste_clean |>
