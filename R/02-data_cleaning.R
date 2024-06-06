@@ -2,6 +2,7 @@
 #Load packages
 library(tidyverse)
 library(readr)
+library(forcats)
 
 #Import a copy of the raw data
 mensa_food_waste_clean <- read_csv("data/raw/mensa_food_waste_raw.csv")
@@ -93,4 +94,44 @@ mensa_food_waste_clean <-  mensa_food_waste_clean |>
 
 #Save clean data to repo
 write_csv(mensa_food_waste_clean, "data/processed/processed_data.csv")
-write_csv(mensa_food_waste_clean, "data/final/final_data.csv")
+
+#Create data for the summary table
+tbl_data <-  mensa_food_waste_clean |>
+  summarise(
+    mean = mean(eating_freq),
+    median = median(eating_freq),
+    min = min(eating_freq),
+    max = max(eating_freq)
+  )
+#Save data to final folder
+write_csv(tbl_data, "data/final/table_data.csv")
+
+#Edit data to create data for figure 1
+fig_1_data <- mensa_food_waste_clean |>
+  mutate(fw_today = fct_recode(fw_today,
+                                 "1" = "Never",
+                                 "2" = "Rarely",
+                                 "3" = "Sometimes",
+                                 "4" = "Often",
+                                 "5" = "Always"),
+         smaller_serving = fct_recode(smaller_serving,
+                               "1" = "Never",
+                               "2" = "Rarely",
+                               "3" = "Sometimes",
+                               "4" = "Often",
+                               "5" = "Always"))
+#Save data to final folder
+write_csv(fig_1_data, "data/final/fig_1_data.csv")
+
+#Edit data to create data for figure 2
+fig_2_data <-  mensa_food_waste_clean |>
+  mutate(second_serving = fct_recode(second_serving,
+                               "1" = "Never",
+                               "2" = "Rarely",
+                               "3" = "Sometimes",
+                               "4" = "Often",
+                               "5" = "Always"))
+#Save data to final folder
+write_csv(fig_2_data, "data/final/fig_2_data.csv")
+  
+  
